@@ -1,0 +1,65 @@
+type: tank
+name: T1 tank
+description: fires strong bullets at the their enemies 
+hitSize: 8
+treadPullOffset: 3
+omniMovement: false
+faceTarget: false
+outlineColor: 44413c
+speed: 1
+rotateSpeed: 2.5
+health: 170
+armor: 2
+itemCapacity: 10
+hitSize: 13
+treadRects: [
+  {
+    x: 9
+    y: -26
+    width: 18
+    height: 48
+  }
+]
+weapons: [
+  {
+    x: 0
+    y: 1
+    name: T1-tank-weapon
+    reload: 40
+    rotate: true
+    mirror: false
+    shootSound: light
+    bullet: {
+      fragLifeMin: 1
+      fragLifeMax: 1
+      fragVelocityMin: 1
+      fragVelocityMax: 1
+      fragRandomSpread: 0
+      fragBullets: 1
+      fragBullet: {
+        type: LightningBulletType
+        lightningLength: 12
+        damage: 6
+        pierce: false
+        buildingDamageMultiplier: 0.75
+        pierceBuilding: false
+        lightningColor: fa0020
+      }
+      type: LaserBulletType
+      pierce: true
+      colors: [cf0000, fa0000, ffffff]
+      pierceBuilding: false
+      length: 80
+      width: 1.5
+      sideAngle: 90
+      sideWidth: 1.4
+      pierce: true
+      pierceCap: 3
+      damage: 16
+      despawnSound: explosion
+      hitSound: explosion
+    }
+  }
+]
+research: T1-mech
+researchCostMultiplier: 0.7
